@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:aqua;
+        }
+        p:hover{
+            color: black;
+
+        }
+        div p:nth-child(2){
+            color:blue;
+        }
+        p::first-letter{
+            color: red;
+        }
+        p::before{
+            content:"😍" ;
+        }
+        p::after{
+            content:"❤" ;
+        }
+        ::placeholder{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <p>Soy un parrafo pseudoclase</p>
+    <div>
+        <p>Soy el parrafo 1 dentro de un div</p>
+        <p>Soy el parrafo 2 dentro de un div</p>
+        <p>Soy el parrafo 3 dentro de un div</p>
+    </div>
+    <input type = "text" placeholder="soy el placeholder">
+</body>
+</html>

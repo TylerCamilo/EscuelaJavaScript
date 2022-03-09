@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p {
+            color: black;
+        }
+
+        div > div{
+            background: brown;
+        }
+        .es{
+            background: red;
+        }
+        div + section{
+            background: purple;
+        }
+        div ~ p{
+            color: blue;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>PRIMER CASO DESCENDIENTE</p>
+        <p>PARRAFO DESCENDIENTE DE UN</p>
+        <p>DIV, ES DECIR P DENTRO DE DIV</p>
+        <div>
+            <p>EJEMPLO DE HIJO DIRECTO, NO DEBERIA TENER BACKGROUN RED</p>
+            <div class = "es">Aqui es un tercer div anidado y es ek hijo directo</div>
+        </div>
+    </div>
+    <p>Soy un parrafo y probaré div~p</p>
+    <div>
+        Soy un nuevo DIV
+    </div>
+    <section>
+        Soun section que va despues de un div probando div +section
+    </section>
+</body>
+</html>

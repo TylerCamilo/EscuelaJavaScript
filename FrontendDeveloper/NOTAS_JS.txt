@@ -1,0 +1,341 @@
+ESTEFAY AGUILAR @TEFFCODE
+
+### CLASE 2 QUE ES HTML Y CSS PARA QUE SIRVE
+
+HTML EL CONTEXTO
+CSS NOS DA ESTILO Y VIDA
+
+### CLASE 3 MOTORES DE RENDER  DE ARCHIVO APIXELES
+
+LOS NAVEGADORES TIENEN MOTORES
+
+CHROME TINE A BLINK
+EDGE TIENE A ADGE HTML
+SAFARI TIENE A WEBKIT
+FIREFOX TIENEN A GECKO
+
+TENIENDO EL MISMO PROCESO
+ PASO DE COMO LO HACE
+	1 HTML A OBJETOS
+	2 CALCULA EL ESTILO CORRESPONDIENTE A CADA NODO DOM
+	3 CALCULA LAS DIMENSIONES DE CADA NODO Y DONDE VA EN LA PANTALLA
+	4 PINTA LAS DIFERENTES CAJAS
+	5 TOMAS LAS CAPAS Y LAS CONVIERTE EN UNA IMAGEN PARA MOSTRAR
+		EN LA PANTALLA
+		
+### CLASE 4 ANATOMIA DE UN DOCUMENTO HTML Y SUS ELEMENTOS
+
+<h1></h1> ETIQUETAS
+<h1 class = "title"> 
+	atributo  class
+	valor title
+- concepto de anidamiento
+
+Eleentos vacios:
+<img src= "cat.jpg" alt= "cat">
+
+
+ANATOMIA DE UN DOCUMENTO HTML
+doctype html 5 : vamos a trabajar con un html
+html lan=en : especifica el lenguaje
+head : cabecera de la pagina web
+meta charset = utf-8 interpretacion de texto
+body todo el cuerpo del texto
+
+### CLASE 5 QUE ES HTML SEMANTICO
+
+<div> La etiqueta es la mas importante
+Ayuda a tu sitio a ser accesible
+Mejora tu posicionamiento
+Codigo mas claro
+
+Vemos como se estructura el codigo usando
+las etiquetas correspondientes a cada espacio de la pagina
+para que sea mas adecuado para su funcionamiento, dandole sentido
+
+### CLASE 6    Etiqeutas de HTML mas usadas
+
+las siguientes van citadas en < >
+Layout
+	header
+	nav
+	section
+	article
+	aside
+	footer
+enlaces
+	a
+Textos
+	h1...h6
+	p
+	span
+Imagenes y videos
+	img
+	svg
+	iframe
+	video
+Formularios
+	form
+	input
+	label
+	button
+Listas
+	ul
+	li
+	ol
+
+### CLASE 7 Anatomia de una declaracion de CSS: SELECTORES, PROPUEDADES Y 
+VALORES
+
+Selectores es el puente que comunica a html y css
+	estilizando con propuedades 
+	
+	h1 {
+	color: pink
+		}
+	h1 selector
+	color propiedad
+	pink valor
+	
+### CLASE 8 TIPOS DE SELECTORES: BASICOS Y COMBINADOS
+
+DE tipo : cual es la etiqeuta que deseamos estilizar
+de clase :  .elemento{...}
+de id : #id-del.elemento
+de atributo : dependiendo del atributo que tenga ej a[href =""....]
+uniersal : * {...} sirve para la hoja de estilo, ahora le daremos toque
+
+SELECTORES COMBINADORES
+
+DESCENDIENTES div p  
+HIJO DIRECTO div > p
+ELEMENTO ADYACENTE div + p
+GENERAL DE HERMANOS div ~ p
+
+#### CLASE 9 Tipos de selectores: pseudoclases y pseudoelementos
+
+PSEUDOCLASES: Son las actividades que nos permiten llegar a las acciones que hace el 
+	usuario: click a un boton, estilizando el boton etc.
+	: active
+	:focus
+	:hover
+	:n+h-child
+
+PSEUDOELEMENTOS: nos permiten acceder a elementos de html que no son acesibles
+	por ejemplo la primera letra de un texto, agregar contenido antes o despues de un txt
+	:: after
+	:: before
+	::first letter
+	::placeholder
+
+### CLAASE 10 Cascada y especificidad en CSS
+
+css hojas de estilo en cascada, significa que el orden de las reglas en css es importante
+tiene mas prelacion las utimas que las primeras por ejemplo:
+	<style>
+        h1{
+            color:red;
+        }
+        h1{
+            color:blue;
+        }
+    </style>
+	
+	Se sobre pondrá el color azul que tiene mas prelaion que el rojo
+	
+
+ESPECIFICDAD: Los navegadores de terminan que reglas de css deben aplicarse a las etiquetas
+	HTML. El orden u el origen de clasificacion del CSS, intervienen en este proceso.
+	
+	sin embargo, aveces los navegadores entran en conflicto porque no saben que regla 
+	aplicar en el archivo. Con la especifidad de los selectores para lidiar con 
+	esos conflictos. Entre una mayor especifidad mayor va a ser la propabilidad
+	de que sus declaraciones se usen sobre las demas. 
+	
+	Como saber cual tiene mas especificida de las demas:
+	
+	- IMPORTANT X 10K
+	- ESTILOS EN LINEA POR 1K
+	- #ID X100
+	- CLASES ATRIBUTOS Y PSEUDOCLASES X10
+	- ELEMENTOS Y PSEUDOELEMENTOS X1
+	- SELECTOR UNIVERSAL 0
+	
+###CLASE 11 Tipos de display más usados: block, inline e inline-block
+
+	Nos habla del tipo de display en css, tipo de visualizacion que 
+	tendra nuestro estilo html 
+	- block
+	- inline
+	- inline-block
+	- flex
+	- grid
+	
+###CLASE 12 Tipos de display más usados: flexbox y CSS grid
+
+Display es el tipo de visualizacion que tinen los elementos mencionados
+en el anterior curso.
+	
+	Ejemplos de felxbox y CSSgrid
+	REVISAR CURSOS DE PLATZI PARA FLEXBOX Y CSS GRID
+	https://platzi.com/blog/flexbox-vs-css-grid-cual-es-la-diferencia/
+	
+###CLASE 13 MODELO DE CAJA
+
+	Todas las etiquetas son cajas, tienen algo importante
+	- contenido
+	- padding (margen interna)
+	- border
+	- margin 
+	
+	vamos al codigo 
+
+### CLASE 14 COLAPSOP DE MARGENES
+
+	SUCEDE CUANDO:
+	HAY DOS ELEMENTOS DE BLOQUE ADYACENTE EJ:
+	- $<P> SOL </P>
+	- $<P> LUNA </P>
+	
+	NO SUCEDE CUANDO:
+	Flexbox,grid y elementosque no sean bloque,ej:
+	- $<div>
+		<p>nar</p>
+		<p>aire</p>
+	   </div>
+	   
+### CLASE 15 POSICIONAMIENTO EN CSS
+	
+	NOS PERMITE UBCAR EL ELENENTO EN UNA POSICIONAMIENTO DETERMINADO, ´PR EJEMPLO
+	- Relative: alinear el elemento
+	-absolute: elementos internos
+	-fixed: Nos deja la posicion fija 
+	-sticky: cuando tenemos una larga lista permite que el titutlo de la misma quede fijo
+	- static: por defecto de los elementos que tiene posicion static 
+	-initial: decir cual es la posicion incial que queremos dar
+	-inherital: colocar si queremos que herede de la posicion padre.
+	
+### INDEX Y EL CONTEXTTO DE APILAMIENTO
+	Nos habla del eje Z que es de apilamento
+	capa sobre capa se forma delante de Z
+	Se puede usar como propiedad. Z-index dando
+	prioridad de 0 a 4, respetando los elementos padres
+	revisado en el codigo. 
+
+	Sepuede ordener la posicion o la prelacion desde el html mismo
+	o dando propiedade de zindex en el CSS
+	
+
+### PROPIEDADES YY VALORES DE CSS MAS USADAS
+
+LAYOUT:
+	- DISPLAY
+MODELO CAJA:
+	- MARGIN
+	- PADDING
+	- BORDER
+TAMAÑOS:
+	- WIDTH
+	- HEIGT
+COLORES DE FONDO
+	- BACKGROUND
+	- BACKGROUND COLOR
+TEXTOS:
+	- FONT SIZE
+	- FONT WEIGHT
+	- FONT FAMILY
+	- TEXT ALING
+	- COLOR
+	
+	SE REALIZO CON CODIGO DONDE USAMOS CADA UNA DE LAS PROPIEDADES CMBINADAS
+	HACIENDO UNA CARTA CON DIFERENTES COSITAS USANDO LAS PROPIEDADES.
+
+### CLASE #18 UNIDADES DE MEDIDA
+
+ABSOLUTAS: No depende de nada
+	- px, pz, cm, pt, in, mm
+RELATIVAS: Dependen de alguien más
+	-  rem, em, vw, vh, vmin, vmax,ex,ch
+	
+	
+vamos al codigo para revisar las mas usadas
+
+### CLASE #19 RESPONSIVE DESGIN
+	NOS REFEREIMOS A QUE SE VEA BIEN EN TODAS LAS RESOLUCIONES
+	EN TODO TIPO DE DISPOSITIVO DONDE SE ESTE VISUALIZANDO NUESTA PAGINA WEB 
+	@MEDIA:
+		Nos ayuda a cambiar los estilos de nuestra pagina cambiando por otras 
+		medidas dependiendo del tamaño. 
+
+REVISAR: Curso de diseño responsivo
+		Responsive desing: media queries
+		
+		
+### CLASE 20 QUÉ SON ARQUITECTURAS CSS Y PARA QUE SIRVE.
+	
+	Las arquitecturas hacen mas predecibles en el pryecto
+	haciendo el codogo reutilizable, mantenible, y escalable.
+	Esos son sus principales objetivos. Que podamos ellgar a hacer modificaciones
+	sin tener que afectar el demás codigo.
+	
+	Buenas practicas que se debe tener:
+	- Lienamientos con el equipo
+	- Documentación para todas las persnas
+	- Usar estandares
+	- Tener componentes (stand by)
+	
+#### CLASE 21 OOCSS, BEM, SMACSS, ITCSS Y ATOMIC DESING
+
+	METODOLOGIAS:
+	
+	- OOCSS: De tener objetos siendo las estructuras principales, mantenidose intacta
+	lo que modificaria seria la parte visual o mascara como la llaman en este metodo.
+	
+	-BEM: Elemento, modificador y bloque LA MAS USADA. 
+	 REVISA EL BLOGPOST https://platzi.com/blog/bem/
+	 
+	- SMACSS: Indica el orden en el que podemos estructurar nuestros diferentes componentes
+		de html en las diferentes carpetas.
+		
+		separado asi: por ejemplo: base,layout, module,state,theme =SMACSS
+		
+	- ITCSS: triamguulo invertido, pdoer hacer serpacion en ajuster herramientas, genericos,
+			elementos, objetos, componentes, tulidades 
+	
+	-ATOMIC DESING: TAMBIEN EL MAS USADO, haciendo analogia a los atomos para construir 
+					templates, paginas etc
+	
+### CLASE 22 CSS PARA ENTREVISTAS Y EL MUNDO LABORAL
+
+	- Basar para estudiar:
+		
+		- HTML, CSS Y JS REFORZAR BASES VIENDO LOS CONCEPTOS DE LA CLASE
+		LAYOUO DISPLAY, INLINE, FELXBOX, CSSGRID, POSITION. 
+		
+		- LEER TODA LA DOCUMENTACION APORTADA POR EL CURSO PARA REFORZAR CADA UNA
+			DE LOS CONCEPTOS BASICOS DADOS EN CLASE. 
+		
+		- HACER SITIOS WEB, REPLICAR SITIOS WEB, PULIENDO BIEN LOS SKILLS, PRACTICAR.
+			PRACTICAR Y PRACTICAR. 
+		
+		- INTENTAR ENTABLAR EN LAS ENTREVISTAS, REFRZAR LAS COSAS QUE NO SE HAN DADO A 
+		BUENAS RESPUESTAS. 
+
+
+#### CLASE 33 COMO CONTINUAR EL CURSO PRACTICO DE FRONTEND DEVELOPER.
+
+	- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
