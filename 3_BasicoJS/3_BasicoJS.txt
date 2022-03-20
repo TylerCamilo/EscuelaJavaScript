@@ -1,0 +1,271 @@
+###CLASE 1 QUE ES JAVASCRIPT?
+	Orientado a generar paginas web dinamicas convirtiendose en app web
+	es un lenguaje interpretado, orientado a objetos, debilmente tipado y dinamico.
+	
+	debilmente tipado:
+	4+ "7"; // 47
+	4 * "7"; // 28
+	2 + true; // 3
+	false - 3;//-3
+	Que asumen con faiclidad cualqueir operacion asi sea erronea, el intenta hacerla
+	dinamico: compilacion: Cunado trabajamos con sintaxis que nosotros entendemos, pero la maquina
+				no entiente el codigo asi que se compila para que la amquina lo interprete.
+				Hay lenguajes que debemos compilar antes de probarlo, con JS es dinamico y no requiere
+				compilación.
+				
+	Es realmente interpretado: Si, porque JS lee linea por linea el codigo digitado
+	//curso de v8 de javascrip para entender lo que sucede y que es un motor//
+	JTC JustTimeCompiler, 
+	
+	BACKWARD Y FORWARD
+	Forward: Si sale una nueva version se puede usar sin romper el codigo hecho con versions viejas
+	Backward: La compatibilidad con versiones anteriores significa que cuando se acepta
+	como JS válido, no habrá un cambio futuro que haga que el codigo deje de funcionar
+	
+	Las nuevas utlidades que salgan no romperan el codigo o provocara que deje de funcionar, 
+	simplemente no las vas a poder usar en tu entorno de trabajo en ese momento. 
+	
+	Todas las nuevas versiones de JS, se tienen que trabajar por la W3C y se tienen que hacer estandares
+	y cuando una funcion o un modulo de JS, HTML, CSS se hace estandar automaticamente el navegador lo
+	entiende y no tendra ningun problema.
+	
+	¿Como puedo usar las nuevas versiones de JS, ECMAscrip 6/7...?
+	 con un compilador de JS  que permite usar nuevas funciones de JS llamado BABEL
+	 que permite usar nuevas funciones o modulos de JS en el entorno de trabajo para 
+	 poder usarlas, simepe conviene usarlas.
+	 
+	 Babel lo que hace es traducir la nueva version de JS a una version  vieja estandar y poder
+	 implementarla en el trabajo
+	 
+### CLASE 2 POR QUE JS?
+
+	J3C consorcio que determina lenguajes y otras cosas. 
+	WEB ASSEMBLY es la nueva para crear productos web 
+	
+	Desarrollo web,
+	Angular,Vue, Reack Lit
+	
+	Desarrollo de Apps
+	ReacT Native
+	
+	Desarrollo de Apps dESKTOP
+	Electron
+	
+	Back edn/IOT
+	Node.js
+	
+	Es un lenguaje muy muy completo y con unas aplciaciones muy amplias.
+	
+
+### CLASE 3 Elementos de un lenguaje de programacion
+
+	1. Datos que giuardamos en memoria
+	2. tareas) (funciones) que haremos con esa data
+	
+	
+	Valores y tipo de valores.
+	 40 es valor tipo numero
+	
+	Valores primitivos son: numeros, texto, boolean, null o undefine
+	
+	Valores No primitivos o tipo objetos: Array, [], valor tipo objeto {nombre: Camilo}
+	
+	type of para saber el tipo de variable
+	
+### CLASE 4 Tipos de variables y como usarlas
+
+	DA EJEMPLO MEDIANTE CODIGO ACECA DE LOS TIPOS DE VARIABLES
+	
+### CLASE 5 FUNCIONES EN JS
+
+	CONJUNTO DE SENTENCIAS QUE GENERAN CIERTAS ACCIONES. 
+	
+	HAY DOS TIPOS DE FUNCIONES
+	
+	DECLARATIVAS
+	
+	function mifuncion(){
+		return(3)
+	}
+	
+	miFuncion(); //DEVUELVE UN 3
+	
+	
+	EXPRESION O ANONIMAS, se le llama asi porque en una variable estamos creando una funcion
+	en cambio las declarativas
+	
+	var miFuncion = function(a,b){
+		return a+b;
+		}
+		
+	miFuncion();
+	
+	EJEMPLO:
+	
+	FUNCION DECLARATIVA
+	
+	function saludatEstudiantes(estudiante){
+	console.log(estudiante);
+	
+	function saludatEstudiantes(estudiante){
+	console.log(´hola ${estudiante}´);
+	
+	
+
+## CLASE 6 DIFERENCIAS ENTRE  FUNCION DECLARATIVA Y EXPRESIVA
+
+
+	Cuando hablamos de funciones en JavaScript, tenemos dos tipos de funciones: Funciones Declarativas 
+	(function declaration / function statement) y Expresiones de función (function expression / funciones
+	anónimas).
+	
+
+Funciones Declarativas:
+En las funciones declarativas, utilizamos la palabra reservada function al inicio para poder declarar la 
+función:
+
+function saludar(nombre) {
+	console.log(`Hola ${nombre}`);
+}
+
+saludar('Diego');
+
+Expresión de función:
+En la expresión de función, la declaración se inicia con la palabra reservada var, donde se generará una 
+variable que guardará una función anónima.
+
+var nombre = function(nombre){
+    console.log(`Hola ${nombre}`)
+}
+
+nombre(‘Diego’);
+
+En la expresión de función, la función podría o no llevar nombre, aunque es más común que se hagan anónimas.
+
+Diferencias:
+A las funciones declarativas se les aplica hoisting, y a la expresión de función, no. Ya que el hoisting 
+solo se aplica en las palabras reservadas var y function.
+
+Lo que quiere decir que con las funciones declarativas, podemos mandar llamar la función antes de que ésta 
+sea declarada, y con la expresión de función, no, tendríamos que declararla primero, y después mandarla 
+llamar.
+
+
+### CLASE 7 SCOPE
+
+	EL SCOPE. Alcance que tienen las variables, es decir donde se crea y donde guarda.
+	
+	SCOPE GLOBAL: existen todas las variables y validaciones. Cuando ejecutamos una funciones 
+	se da la creacion uN SCOPE LOCAL.
+	SCOPE LOCAL: Los datos tienen acceso a las de scope global. no sirve en sentido contrario,
+	lo global no accede al dato requerido
+	
+### CLASE 8 HOISTING
+
+	CUANDO LAS VARIABELS Y LAS FUNCIONES SE DECLARAN ANTES QUE SE PROCESE CUALQUIER TIPO DE CODIGO
+	ECMASCRIP A PARTIR DEL 6 EN ADELANTE NO TIENE PROBLEMA CON ELLO Y TAMBIEN SE PRESENTARON DOS NUEVA
+	CONST Y LET. 
+	
+	ES LO QUE SUCEDE AL QUERER LLAMAR UNA VARIABLE SIN ANTES HABERLA DECLARADO O INICIALIZADO.
+	
+	HOISTING EN LAS VARIABLES
+	
+	var miNombre = undefined;
+	console.log(miNombre + " soy el hoisting");
+	miNombre = "camilo";
+	
+	la consola nos regresa
+	-undefined soy el hoisting
+	- "camilo"
+	
+	LO QUE SUCEDE ES QUE NOS CARGA PRIMERO EL UDENFINE Y LUEGO EL NOMBRE CORRECTO DESPUES DE HABER
+	DECLARADO EL NOMRE
+	
+	HOISTING EN LAS FUNCIONES
+	
+	LLAMARLA ANTES DE DECLARAR
+	ENTONCES DECLARA PRIEMR VAR Y ENSEGUIDA LAS FUNCIONES APRA QUE EJECUTE CON NOTMALIDAD
+	
+	BUENAS PRACTICAS ES MEJOR DECLARARLAS AL INICIO DE CODIGO. 
+	
+### CLASE 9 COERSION
+
+	Del ejemplo de la clase:
+	
+	coersion implisita: es cuando el lenguaje nos ayuda y cambia de un tipo de valor a otro.
+	coersion explicita: donde obligamos que cambie el tipo de variable
+	
+	var a = 20
+	var c = String(a)
+
+typeof c
+'string'
+
+var d = Number(c)
+
+typeof d
+'number'
+	
+	
+### CLASE 10 Truthy adn Falsy
+
+	Se ocupa cuando se usan condiciones en JS.
+	saber cuando algo es falso o es verdadero.
+	
+	Que valores por default son F o V
+	
+	con el uso de Boolean identificamos los valores F y V
+	F es, null, NaN, Undefined, "", 0, 
+	V es, "caracter", 1>,[], funtion, true
+	
+### CLASE 11 OPERADORES, ASIGNACION COMPARACION Y MATEMATICA
+
+	+-*/ OPERADORES BINARIOS por dos cifras
+	 3 == "3", true porque solo compara los valores
+	 3 === "3", false porque no son estrcitamente iguales
+	 
+### CLASE 12 CONDICIONALES IF, ELSE, ELSE IF
+
+	estructura general
+	
+	if(condicion){
+		codigo que ejecutará
+	}
+	else if(condicion cuando no cumple la primera){
+		codigo que ejecutará
+	}
+	else(condicion sino cumple las anteriores{
+		codigo que se ejecutará
+	}
+	
+	
+operador ternario es como generar un if y else en una misma linea de codigo.
+
+	estructura general
+	condition ? true: false;
+	
+	ejmplo:
+	
+	var numero = 1;
+	var resultado = numero === 1 ? "Sí soy un uno : "No, no soy un uno";
+	console.log(resultado)
+	
+	
+### CLASE 13 SWITCH 
+
+	var numero = 1;
+switch (numero){
+    case 1:
+        console.log("Soy 1");
+        break; 					/*Sale de la funcion swicth*/
+    case 2:
+        console.log("Soy 2");
+        break;
+    case 100:
+        console.log("Soy 3");
+        break;
+    default:
+        console.log("No soy nada")
+}
+
+	
