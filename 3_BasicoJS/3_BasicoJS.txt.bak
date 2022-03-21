@@ -225,3 +225,201 @@ typeof d
 	 3 === "3", false porque no son estrcitamente iguales
 	 
 ### CLASE 12 CONDICIONALES IF, ELSE, ELSE IF
+
+	estructura general
+	
+	if(condicion){
+		codigo que ejecutará
+	}
+	else if(condicion cuando no cumple la primera){
+		codigo que ejecutará
+	}
+	else(condicion sino cumple las anteriores{
+		codigo que se ejecutará
+	}
+	
+	
+operador ternario es como generar un if y else en una misma linea de codigo.
+
+	estructura general
+	condition ? true: false;
+	
+	ejmplo:
+	
+	var numero = 1;
+	var resultado = numero === 1 ? "Sí soy un uno : "No, no soy un uno";
+	console.log(resultado)
+	
+	
+### CLASE 13 SWITCH 
+
+	var numero = 1;
+switch (numero){
+    case 1:
+        console.log("Soy 1");
+        break; 					/*Sale de la funcion swicth*/
+    case 2:
+        console.log("Soy 2");
+        break;
+    case 100:
+        console.log("Soy 3");
+        break;
+    default:
+        console.log("No soy nada")
+}
+
+##############     NOTA DE ECMASCRIPT6}
+
+	DESDE LA EPOCA DEL NACIMIENTO DE LOS NAVEGADORES EN 1990, EXISTIA EL CONCEPTO PARTIENDO
+	DE UNNA PELEA DE NETSCAPE VS EL GRANDE MICROSOFT (INTERNET EXPLORER)
+	DANDO NACIMIENTO A VARIAS TECNOLOGIAS JS ENTRE ESAS!  BRENDAN EACH. CREANDO MOCCA-->LIVESCRIP-->JS
+	- JScript lanzado por mmicrfot para añadir caracteristicas especiales a sus desarrollos
+	
+	Allli llega ECMA international (European Computer Manufacturer Association) encargados de generar 
+	estandares para el desarrollo.
+	
+	- 1997 ECMA-262, JAVASCRIPT 
+	- EVOLUCION ECMAScript:_
+		1995 mocca
+		1996 Jscript
+		1997 ECMA-262 (ES)
+		1998	ES2
+		1999	ES3
+		2000	ES4
+		2005	ES5
+		2008	AGREGAN MOTO V8 EN CHROME NODE
+		2015	ES6 LA MEJORA MAS SOBRESALIENTE
+		2016	ES7
+		2017	ES8
+		2018	ES9
+		2019	ES10
+		2021 	ES13
+		
+	- PERMITE QUE CUALQIER PERSONA CREE LENGUAJE BAJO ESTOS ESTANDARES
+	
+	- COMO PUEDO USAR LAS ULTIMAS FUNCIONALIDADES DEL LENGUAJE
+	
+		ESNEXT 
+		
+		TC39 ES UN COMITE EN EL CUAL HAY TODOS LOS INTERESADOS DENTRO DEL LENGUAJE
+		QUIENES EVALUAN EL COMO CUANDO Y DONDE SE INCORPORARÁN LAS NUEVAS MEJORAS DEL LENGUAJE 
+		
+		STAGE 0: Strwperon, el borrador propuesta de lo que se quiere
+		STAGE 1: PROPOSAL, propuesta 
+		STAGE 2: DRAFT, 
+		STAGE 3: CANDIDATE
+		STAGE 4: FINISHED
+		
+		
+		curso ECMAScript 6+
+		
+		
+#### CLASE 14 ARRAYS
+
+	generacion de arrays
+	los elementos principales de array son el indiice y elemento
+	
+	var frutas = [];
+	var frutas = ['Manzana', 'Pera', 'Maracuya', 'Cereza', 'Pitaya'];
+	console.log(frutas);
+	console.log(frutas.length); /*Nos regresa el numero de elementos*/
+	console.log(frutas[0]); /*Nos imprime el indice que deseo*/
+	
+	dos tipos de elementos de los arrys
+	- metodo 1: Nos ayuda a mutar los elementos, vamos agregar:
+		
+		var masFrutas = frutas.push(´uva');
+		var ultimo = frutas.pop('uva');
+		var nuevaLongitud = frutas.unshift('uvas'); /*Da prioridad y lo pone al inicio*/
+		var borrarFruta = frutas.shift('uvas');
+		var posicion = frutas.indexof('Maracuya')
+		
+		
+		
+		
+		
+		
+		arr.push(...items) – agrega ítems al final,
+		arr.pop() – extrae un ítem del final,
+		arr.shift() – extrae un ítem del inicio,
+		arr.unshift(...items) – agrega ítems al principio.
+		
+
+### CLASE 15  CICLOS / LOOPS FOR Y FOR OF
+
+	var estudiantes = ['Maria', 'Sergio', 'Camilo', 'Adnres'];
+
+	function saludarEstudiantes(estudiante){
+		console.log(`hola, ${estudiante}`);
+	}
+	for(var i = 0; i < estudiantes.length; i++){
+		saludarEstudiantes(estudiantes[i]);	
+	}
+
+ejemplo 2:
+	
+	var estudiantes = ['Maria', 'Sergio', 'Camilo', 'Adnres'];
+
+	function saludarEstudiantes(estudiante){
+		console.log(`hola, ${estudiante}`);
+	}
+	for(var estudiante of estudiantes){
+		saludarEstudiantes(estudiante);	
+	}
+	
+### CLASE 16 CICLOS / LOOPS WHILE
+	
+	var estudiantes = ['Maria', 'Sergio', 'Camilo', 'Adnres'];
+	
+	function saludarEstudiantes(estudiante){
+		console.log(`hola, ${estudiante}`);
+	}
+	while (estudiantes.length > 0){
+		var estudiante = estudiantes.shift(); /*elimna un estudiante en cada ciclo*/
+		saludarEstudiantes(estudiante);
+	}
+	
+###CLASE 17 OBJECTOS
+
+	COMO LLEVAMOS A UN OBJETO DEL MUNDO FISICO AL MUNDO DE LA PROGRAMACION
+	
+	var miAuto = {
+		marca : "mazda",
+		modelo : "Corolla",
+		annio : 2020
+	};
+	
+	Ahora para acceder a algun elemento de los objetos, de la siguiente manera
+	
+	miAuto.marca accede a la marca, asi con cualquier atributo
+	
+	ahora vamos agregarle auna propíedadque lleva una funcion como valor
+	es un metodo, metodo de objeto
+	
+	var miAuto = {
+		marca : "mazda",
+		modelo : "Corolla",
+		annio : 2020,
+		detalleDelAuto: function(){
+			console.log(`Auto ${this.modelo} ${this.annio}`);
+		}
+	};
+	despeus declarada la llamanos asi:
+	
+	miAuto.detalleDeAuto();
+	
+	this hace referencia al objeto
+	
+### CLASE 18 FUNCION  CONSTRUCTURA
+
+	HACE OBBJETOS DE FORMA AUTOMATICA, SE GENERA COMO UN TEMPLETE DE UN OBJETO DONDE SE 
+	GENERA OPCIONES QUE SON PARMNETROS Y PROPIEDADAS HGACES NUEVAS INSTANCIAS CON 
+	OEPRADOR ESPECIAL, ASI:
+	
+	function auto(marca,modelo, annio){
+		this.marca = marca;
+		this.modelo = modelo;
+		this.annio = annio;
+	}
+	para ingresar un nuevo auto
+	var autoNuevo = new auto("Tesla","Model 3",2020);
