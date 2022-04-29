@@ -423,3 +423,80 @@ ejemplo 2:
 	}
 	para ingresar un nuevo auto
 	var autoNuevo = new auto("Tesla","Model 3",2020);
+	
+### CLASE 19 METODOS DE RECORRIDOS DE ARRAYS
+	
+	primer metodo filter
+
+	var articulos = [
+		{nombre : "Bicicleta", costo : 3000},
+		{nombre : "TV", costo : 2500},
+		{nombre : "libro", costo : 300},
+		{nombre : "Laptop", costo : 30000},
+		{nombre : "Teclado", costo : 500},
+		{nombre : "Audifonos", costo : 1550},
+		];
+		
+	var articulosFiltrados = articulos.filter(function(articulo){
+		return articulo.costo <= 500
+		});
+		
+		
+	segundo metodo map
+	
+		var articulos = [
+		{nombre : "Bicicleta", costo : 3000},
+		{nombre : "TV", costo : 2500},
+		{nombre : "libro", costo : 300},
+		{nombre : "Laptop", costo : 30000},
+		{nombre : "Teclado", costo : 500},
+		{nombre : "Audifonos", costo : 1550},
+		];
+		
+	var nombreArticulos = articulos.map(function(articulo){
+		return articulo.nombre
+	});
+	
+	pedimos la variable creada
+	
+### CLASE 20 Recorriendo Arrays con .find(), .forEach() y .some()
+
+	var articulos = [
+		{nombre : "Bicicleta", costo : 3000},
+		{nombre : "TV", costo : 2500},
+		{nombre : "libro", costo : 300},
+		{nombre : "Laptop", costo : 30000},
+		{nombre : "Teclado", costo : 500},
+		{nombre : "Audifonos", costo : 1550},
+		];
+		
+	El siguiente metodo nos genera una nueva variable con el filltro aplicado
+	es decir con el comparativo estricto a "laptop" nos devuelve el listado de
+	elementos con ese nombre. y con sus otros atributos
+	
+	var encuentraArticulo = articulos.find(function( articulo ){
+		return articulo.nombre === "Laptop"
+	});
+	
+	un nuevo motodo que no genera, solo filtra el array y muestra los articulos  que 
+	para este caso solicitamos filtrar solo los nombres de mis articulos
+	
+	articulos.forEach(function(articulo){
+		console.log(articulo.nombre);
+	});
+	
+	metodo some
+	
+	some() nos regresa una validacion de verdadero o falso
+	
+	var articulosBaratos = articulos.some(function(articulos){
+		return articulos.costo <=700;
+	});
+	
+	respuesta: true
+	
+	Si queremos validar con ciertos criterios por ejemplo aticulos con promociones o ciertas caracteristicas
+	carros rojos, camisetas azules etc.
+	
+
+#### CLASE 21 Eliminando elementos de un Array
