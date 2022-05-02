@@ -8,20 +8,15 @@ var maquina = Math.floor((Math.random() * 3) + 1);
 
 function juego(miOpcion){
     if ( miOpcion === maquina){
-            console.log("Tu escogiste" + miOpcion +" y la maquina" 
-            + maquina + "  es un empate");
-            mensaje = "empate"
+            mensaje = "empate";
         }
     else if (miOpcion === 1 && maquina === 2 || miOpcion === 2 && maquina === 3 || miOpcion === 3 && maquina === 1 ){
-            console.log("Eres el mejor, ganaste");
-            mensaje = "ganaste"
+            mensaje = "ganaste";
     }
     else if (miOpcion === 1 && maquina === 3|| miOpcion === 2 && maquina === 1 || miOpcion === 3 && maquina === 2){
-            console.log("Acabas de perder :( ");
-            mensaje = "perdiste"
+            mensaje = "perdiste";
     }
-
     return mensaje
     }
 
-    juego(miOpcion)
+juego(miOpcion)

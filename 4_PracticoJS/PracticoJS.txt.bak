@@ -1,0 +1,324 @@
+Prueba de JavaScript
+
+1.
+a. ¿Qué es una variable y para qué sirve?
+Respuesta: Unavariable sirve para reservar un espacio en memoria y posteriormente
+ser utilizado.
+b. ¿Cuál es la diferencia entre declarar e inicializar una variable? 
+Respuesta: Declarar una varible es darle su espacio en memoria con un valor default,
+E inicialziarla es darle un valor inicial.
+c. ¿Cuál es la diferencia entre sumar números y concatenar strings?
+Respuesta: Sumar es la operacion aritmetica y concatener es unir dos string y formar
+una oracion etc. 
+d. ¿Cuál operador me permite sumar o concatenar? El operador +, con la condicion que 
+debe ingrear el valor de concatenaren comillas. 
+
+2. Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+
+Nombre String
+Apellido String
+Nombre de usuario en Platzi string
+Edad int
+Correo electrónico string
+Mayor de edad int
+Dinero ahorrado int
+Deudas int 
+
+3.
+
+var name = "Camilo";
+var lastName = "Carrillo";
+var UserNamePlatzi = "CamiloCarrillo28";
+var age = 28; 
+var email = "camilo@carrillo.com";
+var savings = 5000;
+var debts = 1000;
+4. 
+console.log("Su nombre completo es: " + name + " " +lastName);
+console.log("Su Dinero es USD$:" + (savings - debts));
+
+FUNCIONES
+1 
+a. ¿Qué es una función?
+Respuesta: Una funcion es una porcion de codigo que se puede reutilizar en varias
+partes donde se requiera. Y solo es necesario su llamado para ser usada. 
+b. ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+Un parametros es la representacion de un valor que una funcion espera que pase al ser
+llamada. 
+Un argumento es el valor que psasa a un paramentro de procedimiento cuando se llama 
+al procedimiento. El codigo de llamada proporcina los argumentos cuando llama al procedmiento.
+
+Puede pensar en el parámetro como un espacio de aparcamiento y el argumento como un automóvil. 
+Del mismo modo que los automóviles diferentes pueden aparcase en un espacio de aparcamiento en 
+momentos diferentes, el código de llamada puede pasar un argumento diferente al mismo parámetro 
+cada vez que llama al procedimiento. tomado de : (Dcoumentos microsoft )
+
+2.  Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las 
+variables constantes por parámetros y argumentos en una función:
+
+const name = "Juan David";
+const lastname = "Castro Gallego";
+const completeName = name + lastname;
+const nickname = "juandc";
+
+console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+
+function name(completeName, nickname){
+	console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+	return "Imprimi tu funcion"
+	}
+	
+	
+name(camilocarrillo,Karri)
+
+CONDICIONALES
+
+1. 
+a. ¿Qué es una condicional?
+Respuesta: 1En programacion es una sentencia usada para comparar dos variables y hacer validaciones.
+b. ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+Respuesta:  if, else, case 
+if evalua la condicion sino es True ejecuta el else, la condicion case, evalua los parametros y 
+cuand sea true ejecuta la porcion de codigo.
+c. ¿Puedo combinar funciones y condicionales?
+Si, puedes hacer uso de las condicionales dentro de las funciones.
+
+2. Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, 
+else y else if:
+
+const tipoDeSuscripcion = "Basic";
+
+switch (tipoDeSuscripcion) {
+   case "Free":
+       console.log("Solo puedes tomar los cursos gratis");
+       break;
+   case "Basic":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+       break;
+   case "Expert":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+       break;
+   case "ExpertPlus":
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+       break;
+}
+
+Resolución:
+
+const tipoDeSuscripcion = "Basic"
+
+if (tipoDeSuscripcion == "Free"){
+	console.log("Solo puedes tomar los cursos gratis");
+	}
+else if (tipoDeSuscripcion == "Basic"){
+	console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+	}
+else if (tipoDeSuscripcion == "Expert"){
+	console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+	}
+else if (tipoDeSuscripcion == "ExpertPlus"){
+	console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+	}
+No comprendo proque no me deja cerrar con else unicamente
+
+3. Replica el comportamiento de tu condicional anterior con if, else y else if, 
+pero ahora solo con if (sin else ni else if).
+
+Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar 
+cómo replicar este comportamiento con arrays y un solo condicional. 😏
+
+const tipoDeSuscripcion = "Expert"
+
+if (tipoDeSuscripcion == "Free"){
+	console.log("Solo puedes tomar los cursos gratis");
+	}if (tipoDeSuscripcion == "Basic"){
+	console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    }if (tipoDeSuscripcion == "Expert"){
+	console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    }if(tipoDeSuscripcion == "ExpertPlus"){
+	console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+	}
+
+CICLOS:
+1.a Que es un ciclo?
+Respuesta: es un proceso que se repite tantas cantidad de veces como se requiera
+b. Que tipos de ciclos existen en JavaScript.
+Respuesta: Ciclo for, for each, while, do while
+c. Que es un ciclo infinito y por qué su problema?
+Respuesta: Es un ciclo que se repite indefinidamente y es un problema debido a que no
+hay manera de deterlo ya que la condicion false nunca se dará
+d. Puedo mezclar ciclos y condicionales?
+Respuesta: Si, puede haber una condicion para que ejecute un ciclo. 
+
+2. Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+a.
+for (let i = 0; i < 5; i++) {
+    console.log("El valor de i es: " + i);
+}
+
+replica:
+i = 0
+while (i < 5){
+	i = i +1
+	console.log("El valor de i es: " + i)
+}
+
+b. for (let i = 10; i >= 2; i--) {
+    console.log("El valor de i es: " + i);
+}
+
+replica:
+
+i = 10
+ while (i >= 2){
+	console.log("El valor de i es: " + i);
+	i = i-1	
+}
+3. Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. 
+Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos
+a empezar.
+
+Pista: puedes usar la función prompt de JavaScript.
+
+num = prompt("¿Cuanto es 2 + 2? Escribe tu respuesta")
+
+if (num == 4){
+	alert("FELICITACIONES")
+	}else{
+	alert("Debes intentarlo nuevamente, escribe tu respuesta: ")
+	}
+
+LISTAS:
+1.a. Qué es un array?
+Respuesta: Es un arreglo de datos
+b. Que es un objeto?
+Respuesta: Es una coleccion de datos dentro de un array de datos
+c. Cuando es mejor usar objetos o arrays?
+Respuesta: Cuando se va a crear varios objetos con mismas caracteristicas.
+d. ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+Respuesta: No, un objeto tiene una estructura similar a un array.
+2,3,4 No me funcionó compleeto, creo que debo practicar mas el tema 
+de lectura y escritura del array! 
+
+### CLASE 4 Análisis: cómo calcular figuras geométricas
+
+Con las figuras geometricas, cuadrado triangulo y circulo.
+Se analiza como se calculan perimetros y areas
+del circulo
+perimetro/circunferencia = Diametros * pi
+Area = R2 * pi
+
+
+### CLASE 5 Cómo integrar JavaScript en HTML
+
+Calculando figuras en JS
+
+=====
+nota readme
+
+Se escribe con un lengiaje llamado markDown
+
+##Soy un titulo
+##Figuras geometricas
+
+=====
+
+1. deifnir formulas
+2. Implementar llas formulas en JS
+3. crear funciones
+4. integrar JS con HTML
+
+### CLASE 6 Calculando figuras geométricas en JavaScript
+
+Agrupat mensajes en la consola:
+
+con console.group("Nombre");
+	codigo
+	
+	console.groupEnd();
+
+console.group("Cuadrados");
+const ladoCuadrado = 5;
+console.log("Los lados del cuadrado miden " + ladoCuadrado + "cm");
+
+const perimetroCuadrado = ladoCuadrado * 4 ;
+console.log("El perimetro del cuadrado " + perimetroCuadrado + "cm");
+
+const areaCuadrado = ladoCuadrado * ladoCuadrado;
+console.log("El área del cuadrado " + areaCuadrado + "cm^2");
+console.groupEnd();
+
+### CLASE 7 Encapsulando código en funciones
+
+function perimetroCuadrado(lado){
+    return lado * 4;
+}
+
+PARAMETROS CUANDO CONDICIONAMOS
+ARGUMENTOS CUANDO EVNAIMOS LLAMANDO LA FUNCION
+
+llamado de una funcion dentro de otra funcion:
+
+// codigo de circulo
+console.group("Circulo");
+
+function diametroCirculo(radio){
+    return radio * 2;
+}
+
+function perimetroCirculo(radio){
+    const diametro = diametroCirculo(radio);
+    return diametroCirculo * Math.PI;
+}   
+
+se crea la variable diametro partiendo de lo retornado por otr a funcion
+
+### CLASE 8 Interactuando con JavaScript desde HTML
+
+	la etiqueta button dentro de form por defecto qeuda de tipo submit
+	
+	function calcularPerimetroCuadrado (){
+    const input = document.getElementById("inputCuadrado"); recibimos el contenido del input
+    const value = input.value; obtenemos solo el valor digitado
+    const perimetro = perimetroCuadrado(value); llamamos la funcion perimetro con el argumento valor
+    alert(perimetro); Nos muestra el resultado de perimetro en un alert
+}
+
+
+ RETO:
+	- COMPLETAR EL FORMULARIO PARA EL CIRCULO Y EL CUADRADO
+
+###CLASE 9 EXPLICACION DEL RETO
+
+### CLASE 10 ANalisis de como calcular porcentajes y descuentos
+
+### CLASE 11 SE CREA LOGICA DE CALCULAR PRECIO CON DESCUENTO
+
+### CLASE 12 ESCRIBIENDO HTML DESDE JS
+
+<form>
+                <label for="inputPrice">Escriba el precio del producto</label> // EL FOR ES PARA APUNTAR DE CUAL INPUT ESTÁ
+                <label for="">Escriba el descuento del producto|</label>
+                <input id= "inputPrice" type="number">
+                <input id= "inputDiscount" type="number">
+                <button type="button" onclick="onClickButtonPriceDiscount"> calcular el precio con descuento</button>
+				//A button le damos el atributo button para que no borre lo escrito por el usuario
+                
+                <p id="ResultP"></p>
+            </form>
+			
+			
+	Escribir el mensaje en HTML, como se hace?
+	
+	En html escribirmos un p vacio con un id
+	por ejemplo
+	
+	<p id="ResultPrice"></p>
+	
+	Ahora en el archivo JS
+	
+	Como necesitamos escribir un mensaje en el parrafo vacio hacemos uso de la funcion innerText
+	
+	resultPrice.innerText = "El precio con descuento son 60"
+	Damos el a tributo con la cadena de texto y debe imprimir el resultado en nuestro HTML
+	
