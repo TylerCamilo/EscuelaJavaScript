@@ -322,3 +322,191 @@ se crea la variable diametro partiendo de lo retornado por otr a funcion
 	resultPrice.innerText = "El precio con descuento son 60"
 	Damos el a tributo con la cadena de texto y debe imprimir el resultado en nuestro HTML
 	
+#### CLASE 13 FUNCIONES MAS INTELIGENTES
+
+	IMPLEMENTAR DESCUENTOS CON CUPONES:
+	
+	
+### CLASE 14 QUE ES PROMEDIO, MODA Y MEDIANA
+
+	 Mediana es el valor que esta en la mitad de los valores
+	 de manera ordenada
+	 cunado es par, se divide en dos los valores centrales
+	 
+	 moda: El elemento que mas se repite en una lista
+	 
+### CLASE 15 CALCULANDO PROMEDIO
+### CLASE 16 CALCULADNO MEDIANA
+ RETO 1 PASAR A FUNCION EL CALCULO DE MEDIANA
+ 
+ function calcularMediaAritmetica  (lista){
+    const sumaLista = lista.reduce(
+        function(valorAcumulado,nuevoElemento){
+            return valorAcumulado + nuevoElemento;
+        }
+    );
+    const promedioLista = sumaLista/lista.length;
+    return promedioLista;
+    }
+function esPar(numero){
+    if(numero%2 === 0){
+        return true;
+    }else{
+        return false;
+        }
+    }
+
+function calcularMediana(lista){
+    const mitadLista = parseInt(lista.length/2);
+
+    let mediana;
+
+    if (esPar(lista.length)){
+        const elemento1 = lista[mitadLista-1];
+        const elemento2 = lista[mitadLista];
+
+        const promedioElemento1y2 = calcularMediaAritmetica([elemento1,elemento2]);
+        mediana = promedioElemento1y2;
+
+        }else{
+            mediana = lista[mitadLista];
+        }
+    return mediana;
+}
+
+ RETO 2 ORENAR EL LISTADO DE NUMEROS USANDO 
+	EL METODO SORT DE LOS ARRAYS LEER: 
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+	
+	function calcularMediaAritmetica  (lista){
+    const sumaLista = lista.reduce(
+        function(valorAcumulado,nuevoElemento){
+            return valorAcumulado + nuevoElemento;
+        }
+    );
+    const promedioLista = sumaLista/lista.length;
+    return promedioLista;
+    }
+function esPar(numero){
+    if(numero%2 === 0){
+        return true;
+    }else{
+        return false;
+        }
+    }
+function ordenarNumeros(a,b){
+    return a- b;
+}
+function calcularMediana(lista){
+    
+    const listaOrdenada = lista.sort(ordenarNumeros);
+    const mitadLista = parseInt(listaOrdenada.length/2);
+
+    let mediana;
+
+    if (esPar(lista.length)){
+        const elemento1 = lista[mitadLista-1];
+        const elemento2 = lista[mitadLista];
+
+        const promedioElemento1y2 = calcularMediaAritmetica([elemento1,elemento2]);
+        mediana = promedioElemento1y2;
+
+        }else{
+            mediana = lista[mitadLista];
+        }
+    return mediana;
+}
+### CLASE 17 CALCULANDO LA MODA CON JS
+	
+	Recordemos que la moda es el numero que mas se repite
+	reto volver a funcion:
+	
+### CLASE 18 RETO DE HACER UN TIPO DE PROMEDIO
+
+### CLASE 19 ANALISIS: COMO ANALIZAR SALARIOS
+
+	requerimientos:
+		- Crear personas como objetos
+		nombre, salario
+		- total de ingreso por pais
+		- promedio por pais 
+		- mediana por pais
+		- Resultados  generales
+		- Top 10 para calcular la diferencia salarial (ver mejor)
+		
+### CLASE 20: CALCULANDO LA MEDIANA DE SALARIOS
+
+### CLASE 21: Calculando el top 10% de salarios
+const spliceStart = (salariosColOrden.length * 90) / 100;
+const spliceCount = salariosColOrden.length - spliceStart;
+
+
+const salariosColTop10 = salariosColOrden.splice(
+    spliceStart,
+    spliceCount,
+    );
+	
+	splice nos saca el pedazo de u array 
+	desde un elemento a ahasta un elemento b
+	segun le pidamos
+	
+		
+### CLASE 22
+En este módulo pusimos en práctica todo lo que aprendimos 
+en los talleres pasados para calcular la mediana de salarios 
+de tu país (aunque por ahora son solo datos ficticios).
+
+Para completar el reto de este último taller solo debes dejar 
+volar tu imaginación y usar todas las herramientas que aprendiste
+ para expandir tu análisis salarial.
+
+¿Cómo? Como quieras
+Puedes calcular la mediana de ingresos no fijos, capacidad de 
+ahorro, capacidad de endeudamiento, recolección de impuestos, 
+diferencia salarial, relación entre formalidad/informalidad y 
+pobreza/riqueza…
+
+El reto es de tema libre. Escoge la pregunta que prefieras, 
+incluso mejor si has vivido una situación parecida alguna vez,
+ resuélvela y muéstranos tu solución en los comentarios.
+
+Para lograrlo solo debes seguir los siguientes pasos:
+
+Plantea muy detalladamente el problema/análisis/cálculo/hipótesis
+ que quieres resolver.
+Encuentra las fórmulas necesarias para resolver el dilema que 
+seleccionaste.
+Define las variables y funciones para resolver tus fórmulas.
+Presenta los resultados de tu informe en una página web dinámica
+ usando HTML, CSS y JavaScript.
+Organiza y documenta tu código para que sea más fácil de leer y
+ entender.
+Publícalo en tu repositorio de GitHub y muéstranos el link en la
+ sección de comentarios.
+Te recomiendo que inicies con una pregunta sencilla. Pon un
+ tiempo límite generoso, desarrolla tu proyecto hasta el final 
+ y publica tus resultados en la sección de comentarios.
+
+Luego vuelve a empezar con una pregunta más compleja. Y así 
+sucesivamente hasta que tu estudio de salarios sea el proyecto 
+del que más orgullosa te puedas sentir.
+
+
+
+
+- horas nocturnas desde las 21 hasta 06
+- trabajo nocturno 35% sobre el valor del trabajo ordinario 
+	diurno
+	excepto cuando se trabajan 36 hs semanales
+- trabajo EXTRANOCTURNO 75% sobre el ordinario diruno
+	
+en los casos anteriores se efectua pago el periodo siguiente 
+
+- el domingo y festivos se pagará al 75% del ordinario proporcion 
+	por horas
+	
+- el recargo nocturno es de 35% sobre el diurno
+- el recargo nocturno dominical y festivo 75%
+
+(dominical y festivo nocturno ordinario 110% adicional 75% + 35%)
+(dominical y festivo extra-nocturno 150% adicional 75 % + 75%)

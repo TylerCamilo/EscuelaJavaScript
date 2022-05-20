@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Calculadora Salarial | Curso Práctico de JavaScript en Platzi</title>
+  <link rel="stylesheet" href="./calcularoraSalaria.css">
+</head>
+<body>
+  
+  <div class="general-screen">
+    <div class = "form-container"> 
+        <img src ="./Dinero.jpg" alt="logo" class = "logo">
+        <h1 class = "title">
+          Calcula tu sueldo
+        </h1>
+        <p class = "subtitle">Si tiene dudas de su pago de nómina ingrese sus datos</p>
+
+        <h2>Calcula de nómina, ingrese los datos solicitados</h2>
+
+        <form class="form">
+          <label for="InputSalary" class = "label">Asignacion Salarial:</label></br>
+          <input id="InputSalary" type="number" placeholder="Ingrese salario mensual"
+          class = "input"/></br>
+          
+          <label for="InputWorkDays" class = "label">Si cumplió con 48 semanales escriba 30:</label></br>
+          <input id="InputWorkDays" type="number" placeholder="30"
+          class = "input" /></br>   
+
+          <label for="InputRecargoFestivo" class = "label">Cantidad de horas con  recargo festivo diurno:</label></br>
+          <input id="InputRecargoFestivo" type="number" placeholder="ejemplo: 25"
+          class = "input" /></br>
+
+          <label for="InputRecargoNocturno" class = "label">Cantidad de horas con recargo nocturno ordinario:</label></br>
+          <input id="InputRecargoNocturno" type="number" placeholder="ejemplo: 30"
+          class = "input" /></br>
+
+          <label for="InputRecargoNocturnoFestivo" class = "label">Cantidad de horas con recargo nocturno festivo:</label></br>
+          <input id="InputRecargoNocturnoFestivo" type="number" placeholder="ejemplo: 40"
+          class = "input" /></br>
+
+          <label for="InputRodamiento" class = "label">Digite la asignación por concepto
+            de rodamiento, mensual:</label></br>
+          <input id="InputRodamiento" type="number" placeholder="ejemplo: 400000"
+          class = "input" /></br>
+
+          <label for="InputExtralegal" class = "label">Pagos extralegales, sino aplica digite 0:</label></br>
+          <input id="InputExtralegal" type="number" placeholder="ejemplo: 3000000"
+          class = "input" /></br>
+        </form>
+
+        <button type="button" onclick="onClickButtonSalaryCompute()" class="primary-button">
+          Calcular su salario
+        </button>
+
+        <div class = "resultInformation">
+          <h1 class = "title">El resultado de sus ingresos es: </h1><br>
+          <p id="salarioQuincenal"></p>
+          <p id="salarioDiario"></p>
+          <p id="recargoFestivoDiurno"></p>
+          <p id="recargoNocturno"></p>
+          <p id="recargoNocFest"></p>
+          <p id="rodamiento"></p>
+          <p id="totalPagar"></p>
+          <p id="totalRetirar"></p>
+        </div>
+    </div>
+    
+
+   
+
+    <script src="./calculadoraSalarial.js"></script>
+  </div>
+</body>
+</html>
